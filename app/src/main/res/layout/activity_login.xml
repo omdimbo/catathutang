@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream">
+
+    <!-- Soft sage blob top-left -->
+    <View android:layout_width="260dp" android:layout_height="260dp"
+        android:background="@drawable/glow_cyan_bg" android:alpha="0.12"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="-90dp" android:layout_marginTop="-90dp"/>
+
+    <!-- Soft warm blob bottom-right -->
+    <View android:layout_width="200dp" android:layout_height="200dp"
+        android:background="@drawable/glow_purple_bg" android:alpha="0.14"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="-60dp" android:layout_marginBottom="-60dp"/>
+
+    <!-- Brand section -->
+    <LinearLayout android:id="@+id/brand_section"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:orientation="vertical" android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/login_card"
+        android:layout_marginBottom="20dp">
+
+        <FrameLayout android:layout_width="88dp" android:layout_height="88dp"
+            android:background="@drawable/avatar_bg" android:layout_marginBottom="14dp">
+            <ImageView android:layout_width="68dp" android:layout_height="68dp"
+                android:src="@mipmap/ic_launcher" android:layout_gravity="center"
+                android:scaleType="centerCrop"/>
+        </FrameLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="CatatHutang" android:textSize="28sp" android:textStyle="bold"
+            android:textColor="@color/sage_dark" android:letterSpacing="0.01"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Kelola keuangan dengan bijak"
+            android:textSize="13sp" android:textColor="@color/sage"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <!-- Login card -->
+    <LinearLayout android:id="@+id/login_card"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:background="@drawable/login_card_bg"
+        android:padding="28dp" android:layout_marginHorizontal="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.64">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Selamat Datang" android:textSize="20sp" android:textStyle="bold"
+            android:textColor="@color/sage_dark" android:layout_marginBottom="3dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Masuk untuk melanjutkan" android:textSize="12sp"
+            android:textColor="@color/text_secondary" android:layout_marginBottom="24dp"/>
+
+        <!-- Google button -->
+        <LinearLayout android:id="@+id/btn_google"
+            android:layout_width="match_parent" android:layout_height="54dp"
+            android:orientation="horizontal" android:background="@drawable/btn_google"
+            android:gravity="center" android:layout_marginBottom="12dp"
+            android:clickable="true" android:focusable="true">
+            <TextView android:layout_width="22dp" android:layout_height="22dp"
+                android:text="G" android:textSize="13sp" android:textStyle="bold"
+                android:textColor="@color/white" android:gravity="center"
+                android:background="@drawable/glow_google_btn" android:layout_marginEnd="12dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Masuk dengan Google" android:textSize="14sp"
+                android:textStyle="bold" android:textColor="@color/text_primary"/>
+        </LinearLayout>
+
+        <!-- Divider -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+            <View android:layout_width="0dp" android:layout_height="1dp"
+                android:layout_weight="1" android:background="@color/sage_light"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="  atau  " android:textSize="11sp" android:textColor="@color/text_hint"/>
+            <View android:layout_width="0dp" android:layout_height="1dp"
+                android:layout_weight="1" android:background="@color/sage_light"/>
+        </LinearLayout>
+
+        <!-- Guest button -->
+        <LinearLayout android:id="@+id/btn_guest"
+            android:layout_width="match_parent" android:layout_height="54dp"
+            android:orientation="horizontal" android:background="@drawable/btn_guest"
+            android:gravity="center" android:layout_marginBottom="20dp"
+            android:clickable="true" android:focusable="true">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="👤" android:textSize="18sp" android:layout_marginEnd="12dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Masuk sebagai Tamu" android:textSize="14sp"
+                android:textStyle="bold" android:textColor="@color/warm_dark"/>
+        </LinearLayout>
+
+        <ProgressBar android:id="@+id/progress_bar" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_gravity="center_horizontal"
+            android:indeterminateTint="@color/sage" android:visibility="gone"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Data tersimpan secara lokal di perangkat ini."
+            android:textSize="10sp" android:textColor="@color/text_hint"
+            android:gravity="center" android:lineSpacingMultiplier="1.4" android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

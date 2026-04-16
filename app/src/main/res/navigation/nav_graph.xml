@@ -80,4 +80,14 @@
         android:label="Investasi"
         tools:layout="@layout/fragment_investasi"/>
 
+
+    <!-- SETTINGS -->
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.catathutang.ui.settings.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings"/>
+
 </navigation>
+
+    <!-- This closing tag replacement handled below -->

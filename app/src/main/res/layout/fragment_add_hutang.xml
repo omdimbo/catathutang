@@ -1,98 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="?attr/colorSurface">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/cream">
 
-    <!-- Header -->
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical">
+        android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical"
+        android:background="@color/bg_card">
         <Button android:id="@+id/btn_back" android:layout_width="32dp" android:layout_height="32dp"
-            android:text="‹" android:textSize="18sp" android:padding="0dp"
-            style="@style/Widget.Material3.Button.TextButton"
+            android:text="‹" android:textSize="20sp" android:padding="0dp"
+            android:textColor="@color/sage" android:background="@null"
             android:layout_marginEnd="10dp"/>
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:text="Catat Hutang Baru" android:textSize="17sp" android:textStyle="bold"
-            android:textColor="?attr/colorOnSurface"/>
+            android:textColor="@color/text_primary" android:letterSpacing="0.02"/>
     </LinearLayout>
 
     <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:orientation="vertical" android:padding="14dp">
+            android:orientation="vertical" android:padding="16dp">
 
-            <!-- Type toggle -->
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:text="Jenis" android:textSize="11sp" android:textStyle="bold"
-                android:textColor="?attr/colorOnSurfaceVariant" android:layout_marginBottom="5dp"/>
+                android:text="JENIS" android:textSize="10sp" android:textStyle="bold"
+                android:textColor="@color/sage" android:letterSpacing="0.1"
+                android:layout_marginBottom="8dp"/>
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="14dp">
+                android:orientation="horizontal" android:layout_marginBottom="18dp">
                 <Button android:id="@+id/btn_type_berhutang" android:layout_width="0dp"
-                    android:layout_height="44dp" android:layout_weight="1"
-                    android:text="💸 Saya berhutang" android:textSize="12sp"
-                    android:layout_marginEnd="6dp"
-                    style="@style/Widget.Material3.Button.OutlinedButton"/>
+                    android:layout_height="48dp" android:layout_weight="1"
+                    android:text="💸 Berhutang" android:textSize="12sp" android:textStyle="bold"
+                    android:layout_marginEnd="6dp" android:background="@drawable/btn_neon_cyan"
+                    android:textColor="@color/sage"/>
                 <Button android:id="@+id/btn_type_piutang" android:layout_width="0dp"
-                    android:layout_height="44dp" android:layout_weight="1"
-                    android:text="💰 Saya berpiutang" android:textSize="12sp"
-                    android:layout_marginStart="6dp"
-                    style="@style/Widget.Material3.Button.OutlinedButton"/>
+                    android:layout_height="48dp" android:layout_weight="1"
+                    android:text="💰 Berpiutang" android:textSize="12sp" android:textStyle="bold"
+                    android:layout_marginStart="6dp" android:background="@drawable/btn_guest"
+                    android:textColor="@color/warm_dark"/>
             </LinearLayout>
 
-            <!-- Name -->
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:text="Nama" android:textSize="11sp" android:textStyle="bold"
-                android:textColor="?attr/colorOnSurfaceVariant" android:layout_marginBottom="4dp"/>
+                android:text="NAMA" android:textSize="10sp" android:textStyle="bold"
+                android:textColor="@color/sage" android:letterSpacing="0.1"
+                android:layout_marginBottom="6dp"/>
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp">
+                android:layout_marginBottom="14dp"
+                app:boxStrokeColor="@color/sage"
+                app:hintTextColor="@color/text_secondary"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_nama" android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:hint="Nama orang"
-                    android:inputType="textPersonName"/>
+                    android:inputType="textPersonName" android:textColor="@color/text_primary"
+                    android:background="@null"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Nominal -->
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:text="Nominal (Rp)" android:textSize="11sp" android:textStyle="bold"
-                android:textColor="?attr/colorOnSurfaceVariant" android:layout_marginBottom="4dp"/>
+                android:text="NOMINAL (RP)" android:textSize="10sp" android:textStyle="bold"
+                android:textColor="@color/sage" android:letterSpacing="0.1"
+                android:layout_marginBottom="6dp"/>
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp">
+                android:layout_marginBottom="14dp"
+                app:boxStrokeColor="@color/sage"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_nominal" android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:hint="0"
-                    android:inputType="numberDecimal" android:textSize="20sp" android:textStyle="bold"/>
+                    android:inputType="numberDecimal" android:textSize="22sp"
+                    android:textStyle="bold" android:textColor="@color/sage"
+                    android:background="@null"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Keterangan -->
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:text="Keterangan" android:textSize="11sp" android:textStyle="bold"
-                android:textColor="?attr/colorOnSurfaceVariant" android:layout_marginBottom="4dp"/>
+                android:text="KETERANGAN" android:textSize="10sp" android:textStyle="bold"
+                android:textColor="@color/sage" android:letterSpacing="0.1"
+                android:layout_marginBottom="6dp"/>
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp">
+                android:layout_marginBottom="14dp"
+                app:boxStrokeColor="@color/sage"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_keterangan" android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:hint="Untuk apa?"
-                    android:inputType="text"/>
+                    android:textColor="@color/text_primary" android:background="@null"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Kategori -->
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:text="Kategori" android:textSize="11sp" android:textStyle="bold"
-                android:textColor="?attr/colorOnSurfaceVariant" android:layout_marginBottom="4dp"/>
+                android:text="KATEGORI" android:textSize="10sp" android:textStyle="bold"
+                android:textColor="@color/sage" android:letterSpacing="0.1"
+                android:layout_marginBottom="6dp"/>
             <Spinner android:id="@+id/spinner_kategori" android:layout_width="match_parent"
-                android:layout_height="48dp" android:layout_marginBottom="16dp"
-                android:entries="@array/kategori_hutang"
-                style="@style/Widget.AppCompat.Spinner.DropDown"/>
+                android:layout_height="48dp" android:layout_marginBottom="20dp"
+                android:entries="@array/kategori_hutang" android:background="@drawable/input_bg"
+                android:paddingHorizontal="12dp" android:textColor="@color/text_primary"
+                android:popupBackground="@color/bg_card2"/>
 
             <Button android:id="@+id/btn_simpan" android:layout_width="match_parent"
-                android:layout_height="48dp" android:text="Simpan"
-                android:textSize="14sp" android:backgroundTint="@color/red"
+                android:layout_height="52dp" android:text="SIMPAN"
+                android:textSize="14sp" android:textStyle="bold" android:letterSpacing="0.1"
+                android:textColor="@color/white" android:backgroundTint="@color/sage"
                 style="@style/Widget.Material3.Button"/>
         </LinearLayout>
     </ScrollView>

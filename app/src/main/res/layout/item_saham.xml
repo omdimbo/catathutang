@@ -12,13 +12,12 @@
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
         android:orientation="horizontal" android:padding="12dp" android:gravity="center_vertical">
 
-        <!-- Ticker badge -->
         <TextView android:id="@+id/tv_ticker"
-            android:layout_width="42dp" android:layout_height="42dp"
+            android:layout_width="44dp" android:layout_height="44dp"
             android:gravity="center" android:textSize="10sp" android:textStyle="bold"
+            android:background="@drawable/card_bg"
             android:layout_marginEnd="10dp"/>
 
-        <!-- Info -->
         <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
             android:layout_weight="1" android:orientation="vertical">
             <TextView android:id="@+id/tv_kode" android:layout_width="wrap_content"
@@ -28,18 +27,18 @@
                 android:layout_height="wrap_content" android:textSize="11sp"
                 android:textColor="?attr/colorOnSurfaceVariant" android:maxLines="1"
                 android:ellipsize="end"/>
+            <TextView android:id="@+id/tv_volume" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="10sp"
+                android:textColor="?attr/colorOnSurfaceVariant"/>
         </LinearLayout>
 
-        <!-- Price + change -->
         <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:orientation="vertical" android:gravity="end">
             <TextView android:id="@+id/tv_harga" android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:textSize="13sp"
                 android:textStyle="bold" android:textColor="?attr/colorOnSurface"/>
             <TextView android:id="@+id/tv_change" android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:textSize="11sp"
-                android:textStyle="bold"/>
+                android:layout_height="wrap_content" android:textSize="11sp" android:textStyle="bold"/>
         </LinearLayout>
-
     </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.catathutang.R
+import com.catathutang.auth.UserSession
 import com.catathutang.databinding.FragmentHutangBinding
 import com.catathutang.utils.Formatter
 import com.catathutang.utils.quotes
@@ -30,13 +31,10 @@ class HutangFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        adapter = HutangAdapter(
-            onItemClick = { hutang ->
-                val action = HutangFragmentDirections.actionHutangToHutangDetail(hutang.id)
-                findNavController().navigate(action)
-            }
-        )
-
+        adapter = HutangAdapter { hutang ->
+            val action = HutangFragmentDirections.actionHutangToHutangDetail(hutang.id)
+            findNavController().navigate(action)
+        }
         binding.recyclerHutang.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerHutang.adapter = adapter
 
@@ -44,8 +42,14 @@ class HutangFragment : Fragment() {
             findNavController().navigate(R.id.action_hutang_to_addHutang)
         }
 
-        binding.btnAdd.setOnClickListener {
-            findNavController().navigate(R.id.action_hutang_to_addHutang)
+        // Show user avatar initials
+        val session = UserSession(requireContext())
+        session.userInfo?.let { user ->
+            val initials = if (user.isGuest) "TM"
+            else user.displayName.split(" ")
+                .mapNotNull { it.firstOrNull()?.toString() }
+                .take(2).joinToString("").uppercase()
+            binding.tvUserAvatar.text = initials
         }
 
         observeViewModel()
@@ -56,24 +60,20 @@ class HutangFragment : Fragment() {
     private fun observeViewModel() {
         viewModel.activeHutang.observe(viewLifecycleOwner) { list ->
             adapter.submitList(list)
-            binding.tvSubtitle.text = "${list.size} catatan aktif"
+            binding.tvSubtitle.text = getString(R.string.hutang_active_count, list.size)
             binding.emptyState.visibility = if (list.isEmpty()) View.VISIBLE else View.GONE
         }
-
-        viewModel.totalBerhutang.observe(viewLifecycleOwner) { total ->
-            binding.tvBerhutang.text = Formatter.fmt(total)
+        viewModel.totalBerhutang.observe(viewLifecycleOwner) {
+            binding.tvBerhutang.text = Formatter.fmt(it)
         }
-
-        viewModel.totalPiutang.observe(viewLifecycleOwner) { total ->
-            binding.tvPiutang.text = Formatter.fmt(total)
+        viewModel.totalPiutang.observe(viewLifecycleOwner) {
+            binding.tvPiutang.text = Formatter.fmt(it)
         }
-
         viewModel.saldoNet.observe(viewLifecycleOwner) { net ->
-            val color = if (net >= 0) requireContext().getColor(R.color.green)
-            else requireContext().getColor(R.color.red)
+            val color = if (net >= 0) requireContext().getColor(R.color.sage)
+                        else requireContext().getColor(R.color.red_soft)
             binding.tvSaldo.setTextColor(color)
-            val prefix = if (net >= 0) "+" else "-"
-            binding.tvSaldo.text = prefix + Formatter.fmt(abs(net))
+            binding.tvSaldo.text = (if (net >= 0) "+" else "-") + Formatter.fmt(abs(net))
         }
     }
 
@@ -92,11 +92,7 @@ class HutangFragment : Fragment() {
                 background = requireContext().getDrawable(
                     if (index == quoteIndex) R.drawable.dot_active else R.drawable.dot_inactive
                 )
-                setOnClickListener {
-                    quoteIndex = index
-                    renderQuote()
-                    setupQuoteDots()
-                }
+                setOnClickListener { quoteIndex = index; renderQuote(); setupQuoteDots() }
             }
             binding.quoteDots.addView(dot)
         }

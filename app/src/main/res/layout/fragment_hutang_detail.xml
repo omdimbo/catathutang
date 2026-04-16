@@ -1,87 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?attr/colorSurface">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/cream">
 
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Header -->
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical">
+            android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical"
+            android:background="@color/bg_card">
             <Button android:id="@+id/btn_back" android:layout_width="32dp" android:layout_height="32dp"
-                android:text="‹" android:textSize="18sp" android:padding="0dp"
-                style="@style/Widget.Material3.Button.TextButton" android:layout_marginEnd="8dp"/>
+                android:text="‹" android:textSize="20sp" android:padding="0dp"
+                android:textColor="@color/sage" android:background="@null" android:layout_marginEnd="8dp"/>
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:text="Detail Hutang" android:textSize="17sp" android:textStyle="bold"
-                android:textColor="?attr/colorOnSurface"/>
+                android:textColor="@color/text_primary"/>
         </LinearLayout>
 
-        <!-- Avatar card -->
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:orientation="vertical" android:gravity="center" android:padding="24dp">
-            <TextView android:id="@+id/tv_avatar" android:layout_width="72dp" android:layout_height="72dp"
-                android:gravity="center" android:textSize="22sp" android:textStyle="bold"/>
-            <TextView android:id="@+id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:textSize="20sp" android:textStyle="bold" android:textColor="?attr/colorOnSurface"
-                android:layout_marginTop="10dp"/>
-            <TextView android:id="@+id/tv_nominal" android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:textSize="26sp" android:textStyle="bold" android:layout_marginTop="6dp"/>
+            android:orientation="vertical" android:gravity="center" android:padding="28dp">
+            <TextView android:id="@+id/tv_avatar" android:layout_width="80dp" android:layout_height="80dp"
+                android:gravity="center" android:textSize="24sp" android:textStyle="bold"
+                android:textColor="@color/sage" android:background="@drawable/avatar_bg"/>
+            <TextView android:id="@+id/tv_name" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="22sp" android:textStyle="bold"
+                android:textColor="@color/text_primary" android:layout_marginTop="14dp"/>
+            <TextView android:id="@+id/tv_nominal" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="30sp" android:textStyle="bold"
+                android:layout_marginTop="8dp"/>
         </LinearLayout>
 
-        <!-- Info card -->
-        <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:layout_marginHorizontal="14dp" android:layout_marginBottom="12dp"
-            app:cardCornerRadius="13dp" app:cardElevation="1dp" app:cardBackgroundColor="?attr/colorSurface">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:background="@drawable/card_bg"
+            android:layout_marginHorizontal="14dp" android:layout_marginBottom="14dp" android:padding="16dp">
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="vertical" android:padding="14dp">
-
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:orientation="horizontal" android:layout_marginBottom="10dp">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Jenis" android:textSize="12sp" android:textColor="?attr/colorOnSurfaceVariant"
-                        android:layout_weight="1"/>
-                    <TextView android:id="@+id/tv_type" android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:textSize="12sp"
-                        android:textColor="?attr/colorOnSurface" android:textStyle="bold"/>
-                </LinearLayout>
-
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:orientation="horizontal" android:layout_marginBottom="10dp">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Kategori" android:textSize="12sp" android:textColor="?attr/colorOnSurfaceVariant"
-                        android:layout_weight="1"/>
-                    <TextView android:id="@+id/tv_kategori" android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:textSize="12sp"
-                        android:textColor="?attr/colorOnSurface" android:textStyle="bold"/>
-                </LinearLayout>
-
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Keterangan" android:textSize="12sp" android:textColor="?attr/colorOnSurfaceVariant"
-                        android:layout_weight="1"/>
-                    <TextView android:id="@+id/tv_keterangan" android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:textSize="12sp"
-                        android:textColor="?attr/colorOnSurface" android:textStyle="bold"/>
-                </LinearLayout>
-
+                android:orientation="horizontal" android:layout_marginBottom="12dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:text="Jenis" android:textSize="12sp" android:textColor="@color/text_secondary"
+                    android:layout_weight="1"/>
+                <TextView android:id="@+id/tv_type" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="12sp"
+                    android:textColor="@color/text_primary" android:textStyle="bold"/>
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="12dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:text="Kategori" android:textSize="12sp" android:textColor="@color/text_secondary"
+                    android:layout_weight="1"/>
+                <TextView android:id="@+id/tv_kategori" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="12sp"
+                    android:textColor="@color/text_primary" android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:text="Keterangan" android:textSize="12sp" android:textColor="@color/text_secondary"
+                    android:layout_weight="1"/>
+                <TextView android:id="@+id/tv_keterangan" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="12sp"
+                    android:textColor="@color/text_primary" android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
 
-        <!-- Buttons -->
         <Button android:id="@+id/btn_lunas" android:layout_width="match_parent"
-            android:layout_height="48dp" android:text="✓ Tandai Lunas"
-            android:layout_marginHorizontal="14dp" android:layout_marginBottom="8dp"
-            android:backgroundTint="@color/green" style="@style/Widget.Material3.Button"/>
+            android:layout_height="52dp" android:text="✓ TANDAI LUNAS"
+            android:textSize="13sp" android:textStyle="bold" android:letterSpacing="0.08"
+            android:layout_marginHorizontal="14dp" android:layout_marginBottom="10dp"
+            android:textColor="@color/white" android:backgroundTint="@color/sage"
+            style="@style/Widget.Material3.Button"/>
 
         <Button android:id="@+id/btn_hapus" android:layout_width="match_parent"
-            android:layout_height="48dp" android:text="Hapus Catatan"
-            android:layout_marginHorizontal="14dp" android:layout_marginBottom="24dp"
-            style="@style/Widget.Material3.Button.OutlinedButton"
-            android:textColor="@color/red"/>
-
+            android:layout_height="52dp" android:text="HAPUS CATATAN"
+            android:textSize="13sp" android:textStyle="bold" android:letterSpacing="0.08"
+            android:layout_marginHorizontal="14dp" android:layout_marginBottom="28dp"
+            android:textColor="@color/red_soft" android:backgroundTint="@color/red_light"
+            style="@style/Widget.Material3.Button"/>
     </LinearLayout>
 </ScrollView>
