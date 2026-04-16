@@ -24,11 +24,11 @@ class HutangViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     val saldoNet: LiveData<Double> = MediatorLiveData<Double>().apply {
-        addSource(totalBerhutang) { recalc() }
-        addSource(totalPiutang) { recalc() }
-        fun recalc() {
+        fun recalc() {  // ← pindah ke sini, SEBELUM addSource
             value = (totalPiutang.value ?: 0.0) - (totalBerhutang.value ?: 0.0)
         }
+        addSource(totalBerhutang) { recalc() }
+        addSource(totalPiutang) { recalc() }
     }
 
     fun insert(hutang: Hutang) = viewModelScope.launch { repo.insert(hutang) }
