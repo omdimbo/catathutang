@@ -1,54 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="?attr/colorSurface">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/cream">
 
-    <!-- Header -->
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
-        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+        android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical"
+        android:background="@color/bg_card">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical">
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:text="Ide Investasi" android:textSize="18sp" android:textStyle="bold"
-                android:textColor="?attr/colorOnSurface"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:text="Harga terkini · simulasi" android:textSize="11sp"
-                android:textColor="?attr/colorOnSurfaceVariant"/>
+                android:text="Ide Investasi" android:textSize="20sp" android:textStyle="bold"
+                android:textColor="@color/sage" android:letterSpacing="0.03"/>
+            <TextView android:id="@+id/tv_last_updated" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Memuat data..."
+                android:textSize="10sp" android:textColor="@color/text_secondary"/>
         </LinearLayout>
         <Button android:id="@+id/btn_refresh" android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:text="↻ Simulasi refresh"
-            android:textSize="11sp" android:textColor="@color/red" android:visibility="gone"
+            android:layout_height="wrap_content" android:text="↻ Refresh"
+            android:textSize="11sp" android:textColor="@color/sage"
             style="@style/Widget.Material3.Button.TextButton"/>
     </LinearLayout>
 
-    <!-- Tabs -->
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:orientation="horizontal" android:paddingHorizontal="13dp" android:paddingBottom="8dp">
+        android:orientation="horizontal" android:paddingHorizontal="13dp" android:paddingVertical="10dp">
         <Button android:id="@+id/tab_komoditas" android:layout_width="wrap_content"
             android:layout_height="36dp" android:text="Emas &amp; Komoditas"
-            android:textSize="11sp" android:layout_marginEnd="7dp"
-            style="@style/Widget.Material3.Button.TonalButton"/>
+            android:textSize="11sp" android:textStyle="bold" android:layout_marginEnd="7dp"
+            android:background="@drawable/tab_active_bg" android:textColor="@color/sage"/>
         <Button android:id="@+id/tab_saham" android:layout_width="wrap_content"
-            android:layout_height="36dp" android:text="Cek Saham"
-            android:textSize="11sp"
-            style="@style/Widget.Material3.Button.OutlinedButton"/>
+            android:layout_height="36dp" android:text="Saham IDX"
+            android:textSize="11sp" android:textStyle="bold"
+            android:background="@drawable/tab_inactive_bg" android:textColor="@color/text_secondary"/>
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_investasi"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:clipToPadding="false"
-        android:paddingBottom="12dp"/>
+    <ProgressBar android:id="@+id/progress_bar" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_gravity="center_horizontal"
+        android:indeterminateTint="@color/sage" android:visibility="gone"
+        android:layout_marginTop="40dp"/>
 
-    <!-- Note -->
-    <TextView android:id="@+id/saham_note"
-        android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:background="@color/amber_light"
-        android:textColor="@color/amber_dark"
-        android:textSize="11sp" android:lineSpacingMultiplier="1.4"
-        android:paddingHorizontal="14dp" android:paddingVertical="10dp"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_investasi"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:clipToPadding="false" android:paddingBottom="8dp"/>
 
+    <TextView android:id="@+id/saham_note" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="@color/sage_xlight"
+        android:textColor="@color/warm_accent" android:textSize="10sp"
+        android:lineSpacingMultiplier="1.4" android:paddingHorizontal="14dp" android:paddingVertical="10dp"/>
 </LinearLayout>

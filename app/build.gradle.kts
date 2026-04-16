@@ -44,4 +44,23 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     kapt(libs.androidx.room.compiler)
     implementation(libs.gson)
+
+    // Google Sign-In
+    implementation(libs.google.signin)
+    implementation(libs.credential.manager)
+    implementation(libs.credential.manager.play)
+    implementation(libs.google.id)
+
+    // Network
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.logging)
+
+    // ConstraintLayout
+    implementation(libs.constrained.layout)
+
+    // Coroutines
+    implementation(libs.coroutines.android)
+    implementation(libs.lifecycle.runtime.ktx)
 }

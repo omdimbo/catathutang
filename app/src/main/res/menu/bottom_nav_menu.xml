@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/hutangFragment"
+    <item android:id="@+id/hutangFragment"
         android:icon="@drawable/ic_nav_catatan"
         android:title="@string/nav_catatan"/>
-    <item
-        android:id="@+id/cicilanFragment"
+    <item android:id="@+id/cicilanFragment"
         android:icon="@drawable/ic_nav_cicilan"
         android:title="@string/nav_cicilan"/>
-    <item
-        android:id="@+id/investasiFragment"
+    <item android:id="@+id/investasiFragment"
         android:icon="@drawable/ic_nav_investasi"
         android:title="@string/nav_investasi"/>
+    <item android:id="@+id/settingsFragment"
+        android:icon="@drawable/ic_nav_settings"
+        android:title="@string/settings_title"/>
 </menu>

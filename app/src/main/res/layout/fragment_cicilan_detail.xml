@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="?attr/colorSurface">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/cream">
 
-    <!-- Header -->
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical">
+        android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical"
+        android:background="@color/bg_card">
         <Button android:id="@+id/btn_back" android:layout_width="32dp" android:layout_height="32dp"
-            android:text="‹" android:textSize="18sp" android:padding="0dp"
-            style="@style/Widget.Material3.Button.TextButton" android:layout_marginEnd="8dp"/>
+            android:text="‹" android:textSize="20sp" android:padding="0dp"
+            android:textColor="@color/sage" android:background="@null" android:layout_marginEnd="8dp"/>
         <TextView android:id="@+id/tv_title" android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:textSize="17sp" android:textStyle="bold"
-            android:textColor="?attr/colorOnSurface"/>
+            android:textColor="@color/text_primary"/>
     </LinearLayout>
 
     <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
@@ -22,106 +20,104 @@
             android:orientation="vertical">
 
             <!-- Hero card -->
-            <androidx.cardview.widget.CardView android:id="@+id/hero_card"
+            <LinearLayout android:id="@+id/hero_card"
                 android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_margin="14dp"
-                app:cardCornerRadius="13dp" app:cardElevation="0dp">
+                android:orientation="vertical" android:gravity="center"
+                android:padding="20dp" android:layout_margin="14dp"
+                android:background="@drawable/card_bg">
+                <TextView android:id="@+id/tv_hero_icon" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="36sp"/>
+                <TextView android:id="@+id/tv_hero_name" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="18sp" android:textStyle="bold"
+                    android:textColor="@color/text_primary" android:layout_marginTop="6dp"/>
+                <TextView android:id="@+id/tv_hero_sub" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="11sp"
+                    android:textColor="@color/text_secondary" android:layout_marginTop="2dp"/>
+                <ProgressBar android:id="@+id/progress_hero"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent" android:layout_height="10dp"
+                    android:layout_marginTop="14dp" android:max="100"
+                    android:progressTint="@color/sage" android:progressBackgroundTint="@color/sage_light"/>
                 <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:orientation="vertical" android:padding="18dp" android:gravity="center">
-                    <TextView android:id="@+id/tv_hero_icon" android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:textSize="32sp"/>
-                    <TextView android:id="@+id/tv_hero_name" android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:textSize="17sp" android:textStyle="bold"
-                        android:textColor="@color/white" android:layout_marginTop="4dp"/>
-                    <TextView android:id="@+id/tv_hero_sub" android:layout_width="wrap_content"
+                    android:orientation="horizontal" android:layout_marginTop="6dp">
+                    <TextView android:id="@+id/tv_pct" android:layout_width="0dp"
+                        android:layout_height="wrap_content" android:layout_weight="1"
+                        android:textSize="11sp" android:textColor="@color/sage"/>
+                    <TextView android:id="@+id/tv_bln_lagi" android:layout_width="wrap_content"
                         android:layout_height="wrap_content" android:textSize="11sp"
-                        android:textColor="#CCFFFFFF" android:layout_marginTop="2dp"/>
-                    <ProgressBar android:id="@+id/progress_hero"
-                        style="?android:attr/progressBarStyleHorizontal"
-                        android:layout_width="match_parent" android:layout_height="9dp"
-                        android:layout_marginTop="10dp" android:max="100"
-                        android:progressTint="@color/white" android:progressBackgroundTint="#44FFFFFF"/>
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:orientation="horizontal" android:layout_marginTop="4dp">
-                        <TextView android:id="@+id/tv_pct" android:layout_width="0dp"
-                            android:layout_height="wrap_content" android:layout_weight="1"
-                            android:textSize="11sp" android:textColor="#CCFFFFFF"/>
-                        <TextView android:id="@+id/tv_bln_lagi" android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:textSize="11sp" android:textColor="#CCFFFFFF"/>
-                    </LinearLayout>
+                        android:textColor="@color/text_secondary"/>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </LinearLayout>
 
             <!-- Stats grid -->
             <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:columnCount="3" android:paddingHorizontal="14dp" android:layout_marginBottom="8dp">
-
                 <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
                     android:layout_columnWeight="1" android:orientation="vertical" android:gravity="center"
                     android:background="@drawable/card_bg" android:padding="10dp" android:layout_margin="3dp">
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Total" android:textSize="10sp" android:textColor="?attr/colorOnSurfaceVariant"/>
+                        android:text="Total" android:textSize="10sp" android:textColor="@color/text_secondary"/>
                     <TextView android:id="@+id/tv_stat_total" android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:textSize="12sp" android:textStyle="bold"
-                        android:textColor="?attr/colorOnSurface"/>
+                        android:layout_height="wrap_content" android:textSize="11sp"
+                        android:textStyle="bold" android:textColor="@color/text_primary"/>
                 </LinearLayout>
                 <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
                     android:layout_columnWeight="1" android:orientation="vertical" android:gravity="center"
                     android:background="@drawable/card_bg" android:padding="10dp" android:layout_margin="3dp">
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Terbayar" android:textSize="10sp" android:textColor="?attr/colorOnSurfaceVariant"/>
+                        android:text="Terbayar" android:textSize="10sp" android:textColor="@color/text_secondary"/>
                     <TextView android:id="@+id/tv_stat_paid" android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:textSize="12sp" android:textStyle="bold"
-                        android:textColor="@color/green"/>
+                        android:layout_height="wrap_content" android:textSize="11sp"
+                        android:textStyle="bold" android:textColor="@color/sage"/>
                 </LinearLayout>
                 <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
                     android:layout_columnWeight="1" android:orientation="vertical" android:gravity="center"
                     android:background="@drawable/card_bg" android:padding="10dp" android:layout_margin="3dp">
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Sisa" android:textSize="10sp" android:textColor="?attr/colorOnSurfaceVariant"/>
+                        android:text="Sisa" android:textSize="10sp" android:textColor="@color/text_secondary"/>
                     <TextView android:id="@+id/tv_stat_sisa" android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:textSize="12sp" android:textStyle="bold"
-                        android:textColor="@color/red"/>
+                        android:layout_height="wrap_content" android:textSize="11sp"
+                        android:textStyle="bold" android:textColor="@color/red_soft"/>
                 </LinearLayout>
                 <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
                     android:layout_columnWeight="1" android:orientation="vertical" android:gravity="center"
                     android:background="@drawable/card_bg" android:padding="10dp" android:layout_margin="3dp">
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Per bulan" android:textSize="10sp" android:textColor="?attr/colorOnSurfaceVariant"/>
+                        android:text="Per bulan" android:textSize="10sp" android:textColor="@color/text_secondary"/>
                     <TextView android:id="@+id/tv_stat_per_bulan" android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:textSize="12sp" android:textStyle="bold"
-                        android:textColor="?attr/colorOnSurface"/>
+                        android:layout_height="wrap_content" android:textSize="11sp"
+                        android:textStyle="bold" android:textColor="@color/sage"/>
                 </LinearLayout>
                 <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
                     android:layout_columnWeight="1" android:orientation="vertical" android:gravity="center"
                     android:background="@drawable/card_bg" android:padding="10dp" android:layout_margin="3dp">
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Tenor" android:textSize="10sp" android:textColor="?attr/colorOnSurfaceVariant"/>
+                        android:text="Tenor" android:textSize="10sp" android:textColor="@color/text_secondary"/>
                     <TextView android:id="@+id/tv_stat_tenor" android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:textSize="12sp" android:textStyle="bold"
-                        android:textColor="?attr/colorOnSurface"/>
+                        android:layout_height="wrap_content" android:textSize="11sp"
+                        android:textStyle="bold" android:textColor="@color/text_primary"/>
                 </LinearLayout>
                 <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
                     android:layout_columnWeight="1" android:orientation="vertical" android:gravity="center"
                     android:background="@drawable/card_bg" android:padding="10dp" android:layout_margin="3dp">
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Bayar ke-" android:textSize="10sp" android:textColor="?attr/colorOnSurfaceVariant"/>
+                        android:text="Bayar ke-" android:textSize="10sp" android:textColor="@color/text_secondary"/>
                     <TextView android:id="@+id/tv_stat_bayar_ke" android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:textSize="12sp" android:textStyle="bold"
-                        android:textColor="?attr/colorOnSurface"/>
+                        android:layout_height="wrap_content" android:textSize="11sp"
+                        android:textStyle="bold" android:textColor="@color/text_primary"/>
                 </LinearLayout>
             </GridLayout>
 
-            <!-- Add payment -->
+            <!-- Payment input -->
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:orientation="horizontal" android:paddingHorizontal="14dp" android:paddingBottom="6dp"
                 android:gravity="center_vertical">
                 <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
-                    android:text="Tambah pembayaran" android:textSize="11sp" android:textStyle="bold"
-                    android:textColor="?attr/colorOnSurfaceVariant"/>
+                    android:text="TAMBAH PEMBAYARAN" android:textSize="10sp" android:textStyle="bold"
+                    android:textColor="@color/sage" android:letterSpacing="0.08"/>
                 <TextView android:id="@+id/tv_undo" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:text="Batalkan terakhir"
-                    android:textSize="11sp" android:textColor="@color/red"/>
+                    android:layout_height="wrap_content" android:text="↩ Batalkan"
+                    android:textSize="11sp" android:textColor="@color/warm_dark"/>
             </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -129,42 +125,39 @@
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:layout_marginEnd="8dp">
+                    android:layout_weight="1" android:layout_marginEnd="8dp"
+                    app:boxStrokeColor="@color/sage">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_payment" android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:hint="Nominal (Rp)"
-                        android:inputType="numberDecimal"/>
+                        android:inputType="numberDecimal" android:textColor="@color/text_primary"
+                        android:background="@null"/>
                 </com.google.android.material.textfield.TextInputLayout>
                 <Button android:id="@+id/btn_bayar" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:text="Bayar ✓"
-                    android:backgroundTint="@color/red" style="@style/Widget.Material3.Button"/>
+                    android:layout_height="wrap_content" android:text="BAYAR"
+                    android:textColor="@color/white" android:backgroundTint="@color/sage"
+                    style="@style/Widget.Material3.Button"/>
             </LinearLayout>
 
-            <!-- History label -->
             <TextView android:id="@+id/tv_hist_label" android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:text="Riwayat"
-                android:textSize="11sp" android:textStyle="bold"
-                android:textColor="?attr/colorOnSurfaceVariant"
-                android:paddingHorizontal="14dp" android:paddingBottom="4dp"/>
+                android:layout_height="wrap_content" android:text="RIWAYAT"
+                android:textSize="10sp" android:textStyle="bold" android:textColor="@color/sage"
+                android:letterSpacing="0.1" android:paddingHorizontal="14dp" android:paddingBottom="6dp"/>
 
             <TextView android:id="@+id/empty_payments" android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:text="Belum ada pembayaran"
-                android:textSize="11sp" android:textColor="?attr/colorOnSurfaceVariant"
+                android:textSize="11sp" android:textColor="@color/text_secondary"
                 android:gravity="center" android:padding="12dp" android:visibility="gone"/>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_payments"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="14dp"
-                android:nestedScrollingEnabled="false"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_payments"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:paddingHorizontal="14dp" android:nestedScrollingEnabled="false"/>
 
             <Button android:id="@+id/btn_hapus" android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:text="Hapus cicilan ini"
-                android:layout_marginHorizontal="14dp" android:layout_marginVertical="12dp"
-                style="@style/Widget.Material3.Button.OutlinedButton"
-                android:textColor="@color/red"/>
-
+                android:layout_height="wrap_content" android:text="HAPUS CICILAN"
+                android:layout_marginHorizontal="14dp" android:layout_marginVertical="14dp"
+                android:textColor="@color/red_soft" android:backgroundTint="@color/red_light"
+                style="@style/Widget.Material3.Button"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

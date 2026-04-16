@@ -1,30 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Brand red -->
-    <color name="red">#E24B4A</color>
-    <color name="red_dark">#A32D2D</color>
-    <color name="red_light">#FCEBEB</color>
-    <color name="red_very_light">#FFF5F5</color>
+    <!-- Sage & Cream Palette -->
+    <color name="cream">#FAFAF7</color>
+    <color name="sage_light">#D4E6D0</color>
+    <color name="sage">#5A8A60</color>
+    <color name="sage_dark">#2D5016</color>
+    <color name="warm_accent">#C8A882</color>
 
-    <!-- Brand green -->
-    <color name="green">#639922</color>
-    <color name="green_dark">#3B6D11</color>
-    <color name="green_light">#EAF3DE</color>
+    <!-- Derived tones -->
+    <color name="cream_dark">#EEF0EB</color>
+    <color name="sage_xlight">#EBF4E9</color>
+    <color name="sage_medium">#3D6B43</color>
+    <color name="warm_light">#F0E4D4</color>
+    <color name="warm_dark">#8F6A45</color>
+    <color name="red_soft">#C0473C</color>
+    <color name="red_light">#FAE8E7</color>
+    <color name="red_dark">#8B2E25</color>
 
-    <!-- Amber -->
-    <color name="amber">#BA7517</color>
-    <color name="amber_dark">#854F0B</color>
-    <color name="amber_light">#FAEEDA</color>
-
-    <!-- Blue -->
-    <color name="blue">#185FA5</color>
-    <color name="blue_light">#E6F1FB</color>
-
-    <!-- Neutrals -->
+    <!-- Text -->
+    <color name="text_primary">#1C2B1A</color>
+    <color name="text_secondary">#5A6B57</color>
+    <color name="text_hint">#9BAD97</color>
     <color name="white">#FFFFFF</color>
-    <color name="bg_secondary">#F5F5F5</color>
-    <color name="text_secondary">#888888</color>
 
-    <!-- Material seed -->
-    <color name="seed">#E24B4A</color>
+    <!-- Backgrounds -->
+    <color name="bg_dark">#FAFAF7</color>
+    <color name="bg_card">#FFFFFF</color>
+    <color name="bg_card2">#F4F7F3</color>
+    <color name="bg_surface">#FAFAF7</color>
+    <color name="bg_input">#F4F7F3</color>
+    <color name="bg_secondary">#EBF4E9</color>
+
+    <!-- Legacy aliases used across the codebase -->
+    <color name="red">#C0473C</color>
+    <color name="green">#5A8A60</color>
+    <color name="green_dark">#2D5016</color>
+    <color name="green_light">#EBF4E9</color>
+    <color name="amber">#C8A882</color>
+    <color name="amber_dark">#8F6A45</color>
+    <color name="amber_light">#F0E4D4</color>
+    <color name="blue">#5A8A60</color>
+    <color name="blue_light">#D4E6D0</color>
+    <color name="text_secondary_compat">#5A6B57</color>
+    <color name="neon_cyan">#5A8A60</color>
+    <color name="neon_green">#5A8A60</color>
+    <color name="neon_red">#C0473C</color>
+    <color name="neon_amber">#C8A882</color>
+    <color name="neon_purple">#C8A882</color>
+
+    <!-- Nav -->
+    <color name="seed">#5A8A60</color>
 </resources>
