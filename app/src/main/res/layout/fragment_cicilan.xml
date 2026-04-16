@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Cicilan Saya" android:textSize="18sp" android:textStyle="bold" android:textColor="?attr/colorOnSurface"/>
+                <TextView android:id="@+id/tv_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="0 aktif · 0 lunas" android:textSize="11sp" android:textColor="?attr/colorOnSurfaceVariant"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Summary row -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:paddingHorizontal="12dp" android:paddingBottom="8dp">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:orientation="vertical" android:background="@drawable/card_bg" android:padding="10dp" android:layout_marginEnd="4dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total hutang" android:textSize="10sp" android:textColor="?attr/colorOnSurfaceVariant"/>
+                <TextView android:id="@+id/tv_total_hutang" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Rp 0" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/red"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:orientation="vertical" android:background="@drawable/card_bg" android:padding="10dp" android:layout_marginHorizontal="4dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Terbayar" android:textSize="10sp" android:textColor="?attr/colorOnSurfaceVariant"/>
+                <TextView android:id="@+id/tv_total_paid" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Rp 0" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/green"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:orientation="vertical" android:background="@drawable/card_bg" android:padding="10dp" android:layout_marginStart="4dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sisa" android:textSize="10sp" android:textColor="?attr/colorOnSurfaceVariant"/>
+                <TextView android:id="@+id/tv_total_sisa" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Rp 0" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/amber"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView android:id="@+id/empty_state" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Belum ada cicilan.\nTap + untuk menambah." android:textSize="13sp"
+            android:textColor="?attr/colorOnSurfaceVariant" android:gravity="center" android:padding="32dp"
+            android:visibility="gone"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_cicilan"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="80dp"/>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@color/red"
+        app:tint="@color/white"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

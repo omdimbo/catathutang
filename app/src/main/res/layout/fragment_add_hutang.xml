@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/colorSurface">
+
+    <!-- Header -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical">
+        <Button android:id="@+id/btn_back" android:layout_width="32dp" android:layout_height="32dp"
+            android:text="‹" android:textSize="18sp" android:padding="0dp"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_marginEnd="10dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Catat Hutang Baru" android:textSize="17sp" android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"/>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="14dp">
+
+            <!-- Type toggle -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Jenis" android:textSize="11sp" android:textStyle="bold"
+                android:textColor="?attr/colorOnSurfaceVariant" android:layout_marginBottom="5dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="14dp">
+                <Button android:id="@+id/btn_type_berhutang" android:layout_width="0dp"
+                    android:layout_height="44dp" android:layout_weight="1"
+                    android:text="💸 Saya berhutang" android:textSize="12sp"
+                    android:layout_marginEnd="6dp"
+                    style="@style/Widget.Material3.Button.OutlinedButton"/>
+                <Button android:id="@+id/btn_type_piutang" android:layout_width="0dp"
+                    android:layout_height="44dp" android:layout_weight="1"
+                    android:text="💰 Saya berpiutang" android:textSize="12sp"
+                    android:layout_marginStart="6dp"
+                    style="@style/Widget.Material3.Button.OutlinedButton"/>
+            </LinearLayout>
+
+            <!-- Name -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Nama" android:textSize="11sp" android:textStyle="bold"
+                android:textColor="?attr/colorOnSurfaceVariant" android:layout_marginBottom="4dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_nama" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:hint="Nama orang"
+                    android:inputType="textPersonName"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Nominal -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Nominal (Rp)" android:textSize="11sp" android:textStyle="bold"
+                android:textColor="?attr/colorOnSurfaceVariant" android:layout_marginBottom="4dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_nominal" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:hint="0"
+                    android:inputType="numberDecimal" android:textSize="20sp" android:textStyle="bold"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Keterangan -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Keterangan" android:textSize="11sp" android:textStyle="bold"
+                android:textColor="?attr/colorOnSurfaceVariant" android:layout_marginBottom="4dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_keterangan" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:hint="Untuk apa?"
+                    android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Kategori -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Kategori" android:textSize="11sp" android:textStyle="bold"
+                android:textColor="?attr/colorOnSurfaceVariant" android:layout_marginBottom="4dp"/>
+            <Spinner android:id="@+id/spinner_kategori" android:layout_width="match_parent"
+                android:layout_height="48dp" android:layout_marginBottom="16dp"
+                android:entries="@array/kategori_hutang"
+                style="@style/Widget.AppCompat.Spinner.DropDown"/>
+
+            <Button android:id="@+id/btn_simpan" android:layout_width="match_parent"
+                android:layout_height="48dp" android:text="Simpan"
+                android:textSize="14sp" android:backgroundTint="@color/red"
+                style="@style/Widget.Material3.Button"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

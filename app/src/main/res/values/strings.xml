@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CatatHutang</string>
+
+    <!-- Bottom nav -->
+    <string name="nav_catatan">Catatan</string>
+    <string name="nav_cicilan">Cicilan</string>
+    <string name="nav_investasi">Investasi</string>
+
+    <!-- Investasi notes -->
+    <string name="note_komoditas">Data bersifat simulasi untuk ilustrasi. Selalu cek harga terkini sebelum investasi. Investasi mengandung risiko.</string>
+    <string name="note_saham">Data harga saham di atas adalah simulasi. Untuk data real-time, gunakan aplikasi broker terdaftar OJK seperti Stockbit, Ajaib, atau BCA Sekuritas.</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="quote_dot_size">6dp</dimen>
+    <dimen name="card_radius">13dp</dimen>
+    <dimen name="card_radius_sm">8dp</dimen>
+</resources>

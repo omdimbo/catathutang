@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand red -->
+    <color name="red">#E24B4A</color>
+    <color name="red_dark">#A32D2D</color>
+    <color name="red_light">#FCEBEB</color>
+    <color name="red_very_light">#FFF5F5</color>
+
+    <!-- Brand green -->
+    <color name="green">#639922</color>
+    <color name="green_dark">#3B6D11</color>
+    <color name="green_light">#EAF3DE</color>
+
+    <!-- Amber -->
+    <color name="amber">#BA7517</color>
+    <color name="amber_dark">#854F0B</color>
+    <color name="amber_light">#FAEEDA</color>
+
+    <!-- Blue -->
+    <color name="blue">#185FA5</color>
+    <color name="blue_light">#E6F1FB</color>
+
+    <!-- Neutrals -->
+    <color name="white">#FFFFFF</color>
+    <color name="bg_secondary">#F5F5F5</color>
+    <color name="text_secondary">#888888</color>
+
+    <!-- Material seed -->
+    <color name="seed">#E24B4A</color>
+</resources>

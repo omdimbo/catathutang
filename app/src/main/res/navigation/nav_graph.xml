@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/hutangFragment">
+
+    <!-- HUTANG -->
+    <fragment
+        android:id="@+id/hutangFragment"
+        android:name="com.catathutang.ui.hutang.HutangFragment"
+        android:label="Catatan"
+        tools:layout="@layout/fragment_hutang">
+        <action android:id="@+id/action_hutang_to_addHutang"
+            app:destination="@id/addHutangFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_down"/>
+        <action android:id="@+id/action_hutang_to_hutangDetail"
+            app:destination="@id/hutangDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/addHutangFragment"
+        android:name="com.catathutang.ui.hutang.AddHutangFragment"
+        android:label="Catat Hutang Baru"
+        tools:layout="@layout/fragment_add_hutang"/>
+
+    <fragment
+        android:id="@+id/hutangDetailFragment"
+        android:name="com.catathutang.ui.hutang.HutangDetailFragment"
+        android:label="Detail Hutang"
+        tools:layout="@layout/fragment_hutang_detail">
+        <argument android:name="hutangId" app:argType="integer" android:defaultValue="0"/>
+    </fragment>
+
+    <!-- CICILAN -->
+    <fragment
+        android:id="@+id/cicilanFragment"
+        android:name="com.catathutang.ui.cicilan.CicilanFragment"
+        android:label="Cicilan"
+        tools:layout="@layout/fragment_cicilan">
+        <action android:id="@+id/action_cicilan_to_addCicilan"
+            app:destination="@id/addCicilanFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_down"/>
+        <action android:id="@+id/action_cicilan_to_detail"
+            app:destination="@id/cicilanDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/addCicilanFragment"
+        android:name="com.catathutang.ui.cicilan.AddCicilanFragment"
+        android:label="Tambah Cicilan"
+        tools:layout="@layout/fragment_add_cicilan"/>
+
+    <fragment
+        android:id="@+id/cicilanDetailFragment"
+        android:name="com.catathutang.ui.cicilan.CicilanDetailFragment"
+        android:label="Detail Cicilan"
+        tools:layout="@layout/fragment_cicilan_detail">
+        <argument android:name="cicilanId" app:argType="integer" android:defaultValue="0"/>
+    </fragment>
+
+    <!-- INVESTASI -->
+    <fragment
+        android:id="@+id/investasiFragment"
+        android:name="com.catathutang.ui.investasi.InvestasiFragment"
+        android:label="Investasi"
+        tools:layout="@layout/fragment_investasi"/>
+
+</navigation>
