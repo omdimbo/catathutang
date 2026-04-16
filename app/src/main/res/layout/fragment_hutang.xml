@@ -83,15 +83,16 @@
         android:visibility="gone"/>
 
     <!-- List -->
+
+    <!-- FAB -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_hutang"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:clipToPadding="false"
-        android:paddingBottom="80dp"/>
+        android:paddingBottom="80dp" />
 
-    <!-- FAB -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_add"
         android:layout_width="wrap_content"
