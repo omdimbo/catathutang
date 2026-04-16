@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CatatHutang</string>
+
+    <!-- Nav -->
+    <string name="nav_catatan">Catatan</string>
+    <string name="nav_cicilan">Cicilan</string>
+    <string name="nav_investasi">Investasi</string>
+
+    <!-- Login -->
+    <string name="login_welcome">Selamat Datang</string>
+    <string name="login_subtitle">Masuk untuk melanjutkan</string>
+    <string name="login_google">Masuk dengan Google</string>
+    <string name="login_guest">Masuk sebagai Tamu</string>
+    <string name="login_terms">Data tersimpan secara lokal di perangkat ini.</string>
+    <string name="login_tagline">Kelola keuangan dengan bijak</string>
+    <string name="login_or">atau</string>
+
+    <!-- Hutang screen -->
+    <string name="hutang_title">CatatHutang</string>
+    <string name="hutang_active_count">%d catatan aktif</string>
+    <string name="hutang_berhutang">Berhutang</string>
+    <string name="hutang_piutang">Piutang</string>
+    <string name="hutang_saldo">Saldo</string>
+    <string name="hutang_section_active">Catatan aktif</string>
+    <string name="hutang_empty">Belum ada catatan.\nTap + untuk menambah.</string>
+    <string name="hutang_add_title">Catat Hutang Baru</string>
+    <string name="hutang_type_label">Jenis</string>
+    <string name="hutang_type_berhutang">💸 Berhutang</string>
+    <string name="hutang_type_piutang">💰 Berpiutang</string>
+    <string name="hutang_nama_label">Nama</string>
+    <string name="hutang_nama_hint">Nama orang</string>
+    <string name="hutang_nominal_label">Nominal (Rp)</string>
+    <string name="hutang_ket_label">Keterangan</string>
+    <string name="hutang_ket_hint">Untuk apa?</string>
+    <string name="hutang_kat_label">Kategori</string>
+    <string name="hutang_save">Simpan</string>
+    <string name="hutang_saved_toast">Catatan tersimpan!</string>
+    <string name="hutang_validation">Isi nama &amp; nominal!</string>
+    <string name="hutang_detail_title">Detail Hutang</string>
+    <string name="hutang_jenis_label">Jenis</string>
+    <string name="hutang_kategori_label">Kategori</string>
+    <string name="hutang_keterangan_label">Keterangan</string>
+    <string name="hutang_mark_lunas">✓ Tandai Lunas</string>
+    <string name="hutang_hapus">Hapus Catatan</string>
+    <string name="hutang_dialog_lunas_title">Tandai Lunas</string>
+    <string name="hutang_dialog_lunas_msg">Tandai \"%s\" sebagai lunas?</string>
+    <string name="hutang_dialog_hapus_title">Hapus Catatan</string>
+    <string name="hutang_dialog_hapus_msg">Hapus catatan \"%s\"?</string>
+    <string name="hutang_lunas_toast">Ditandai lunas!</string>
+    <string name="hutang_hapus_toast">Catatan dihapus</string>
+    <string name="badge_hutang">Hutang</string>
+    <string name="badge_piutang">Piutang</string>
+    <string name="type_berhutang">Saya berhutang</string>
+    <string name="type_piutang">Saya berpiutang</string>
+
+    <!-- Cicilan screen -->
+    <string name="cicilan_title">Cicilan Saya</string>
+    <string name="cicilan_subtitle">%1$d aktif · %2$d lunas</string>
+    <string name="cicilan_total">Total hutang</string>
+    <string name="cicilan_terbayar">Terbayar</string>
+    <string name="cicilan_sisa">Sisa</string>
+    <string name="cicilan_empty">Belum ada cicilan.\nTap + untuk menambah.</string>
+    <string name="cicilan_add_title">Tambah Cicilan</string>
+    <string name="cicilan_nama_label">Nama cicilan</string>
+    <string name="cicilan_nama_hint">Contoh: Cicilan HP</string>
+    <string name="cicilan_kat_label">Kategori</string>
+    <string name="cicilan_total_label">Total hutang (Rp)</string>
+    <string name="cicilan_per_bulan_label">Cicilan/bulan (Rp)</string>
+    <string name="cicilan_tenor_label">Tenor (bulan)</string>
+    <string name="cicilan_dari_label">Dari (opsional)</string>
+    <string name="cicilan_dari_hint">Bank / nama orang</string>
+    <string name="cicilan_save">Simpan cicilan</string>
+    <string name="cicilan_saved_toast">Cicilan ditambahkan!</string>
+    <string name="cicilan_validation">Isi nama &amp; total!</string>
+    <string name="cicilan_sisa_label">sisa</string>
+    <string name="cicilan_bln_lagi">%d bln lagi</string>
+    <string name="cicilan_selesai">Selesai</string>
+    <string name="cicilan_pct_lunas">%d%% lunas</string>
+    <string name="badge_aktif">Aktif</string>
+    <string name="badge_lunas">Lunas</string>
+    <string name="cicilan_detail_title">Detail Cicilan</string>
+    <string name="cicilan_stat_total">Total</string>
+    <string name="cicilan_stat_terbayar">Terbayar</string>
+    <string name="cicilan_stat_sisa">Sisa</string>
+    <string name="cicilan_stat_per_bulan">Per bulan</string>
+    <string name="cicilan_stat_tenor">Tenor</string>
+    <string name="cicilan_stat_bayar_ke">Bayar ke-</string>
+    <string name="cicilan_tambah_bayar">Tambah Pembayaran</string>
+    <string name="cicilan_batalkan">↩ Batalkan</string>
+    <string name="cicilan_bayar_hint">Nominal (Rp)</string>
+    <string name="cicilan_bayar_btn">Bayar</string>
+    <string name="cicilan_riwayat">Riwayat</string>
+    <string name="cicilan_empty_bayar">Belum ada pembayaran</string>
+    <string name="cicilan_hapus">Hapus Cicilan</string>
+    <string name="cicilan_hapus_msg">Hapus cicilan \"%s\"?</string>
+    <string name="cicilan_hapus_toast">Cicilan dihapus</string>
+    <string name="cicilan_terbayar_pct">%d%% terbayar</string>
+    <string name="cicilan_lunas_msg">Selamat! Cicilan lunas! 🎉</string>
+    <string name="cicilan_bayar_toast">Pembayaran dicatat!</string>
+    <string name="cicilan_undo_toast">Dibatalkan</string>
+    <string name="cicilan_undo_empty">Tidak ada pembayaran</string>
+    <string name="cicilan_melebihi">Melebihi sisa hutang!</string>
+    <string name="cicilan_nominal_kosong">Masukkan nominal!</string>
+    <string name="cicilan_payment_no">Pembayaran ke-%d</string>
+    <string name="cicilan_payment_bulan">Cicilan bulan %d</string>
+    <string name="cicilan_sisa_after">Sisa: %s</string>
+
+    <!-- Investasi -->
+    <string name="investasi_title">Ide Investasi</string>
+    <string name="investasi_tab_komoditas">Emas &amp; Komoditas</string>
+    <string name="investasi_tab_saham">Saham IDX</string>
+    <string name="investasi_refresh">↻ Refresh</string>
+    <string name="investasi_loading">Memuat data…</string>
+    <string name="investasi_updating">Memperbarui data...</string>
+    <string name="note_komoditas">Data harga komoditas bersumber dari Yahoo Finance (real-time). Investasi mengandung risiko.</string>
+    <string name="note_saham">Data harga saham simulasi. Gunakan broker terdaftar OJK untuk transaksi.</string>
+    <string name="note_saham_realtime">Data saham IDX dari Yahoo Finance (delay ~15 menit). Investasi mengandung risiko. Gunakan broker terdaftar OJK.</string>
+
+    <!-- Logout / Settings -->
+    <string name="logout_title">Keluar</string>
+    <string name="logout_msg">Yakin ingin keluar dari aplikasi?</string>
+    <string name="btn_yes">Ya</string>
+    <string name="btn_no">Batal</string>
+    <string name="btn_delete">Hapus</string>
+    <string name="btn_cancel">Batal</string>
+    <string name="settings_title">Pengaturan</string>
+    <string name="settings_language">Bahasa</string>
+    <string name="settings_language_id">Indonesia</string>
+    <string name="settings_language_en">English</string>
+
+    <!-- Kategori -->
+    <string-array name="kategori_hutang">
+        <item>Pribadi</item>
+        <item>Bisnis</item>
+        <item>Keluarga</item>
+    </string-array>
+</resources>

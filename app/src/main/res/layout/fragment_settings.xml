@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:paddingHorizontal="16dp" android:paddingVertical="14dp"
+            android:gravity="center_vertical" android:background="@color/bg_card">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="@string/settings_title"
+                android:textSize="20sp" android:textStyle="bold" android:textColor="@color/sage_dark"/>
+        </LinearLayout>
+
+        <!-- User profile card -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:background="@drawable/card_bg"
+            android:layout_margin="14dp" android:padding="16dp" android:gravity="center_vertical">
+            <TextView android:id="@+id/tv_user_avatar" android:layout_width="52dp"
+                android:layout_height="52dp" android:gravity="center" android:textSize="16sp"
+                android:textStyle="bold" android:textColor="@color/sage"
+                android:background="@drawable/avatar_bg" android:layout_marginEnd="14dp"/>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:id="@+id/tv_user_name" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="15sp" android:textStyle="bold"
+                    android:textColor="@color/text_primary"/>
+                <TextView android:id="@+id/tv_user_email" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="12sp"
+                    android:textColor="@color/text_secondary"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Language section -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/settings_language" android:textSize="11sp" android:textStyle="bold"
+            android:textColor="@color/sage" android:letterSpacing="0.05"
+            android:paddingHorizontal="16dp" android:paddingBottom="8dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:background="@drawable/card_bg"
+            android:layout_marginHorizontal="14dp" android:layout_marginBottom="14dp"
+            android:padding="16dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/settings_language" android:textSize="13sp"
+                android:textColor="@color/text_secondary" android:layout_marginBottom="12dp"/>
+
+            <!-- Toggle buttons -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:background="@color/bg_card2"
+                android:padding="4dp" android:layout_marginTop="4dp">
+
+                <Button android:id="@+id/btn_language_id"
+                    android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1"
+                    android:text="🇮🇩  Indonesia" android:textSize="12sp" android:textStyle="bold"
+                    android:background="@drawable/tab_active_bg" android:textColor="@color/white"
+                    android:layout_marginEnd="3dp"/>
+
+                <Button android:id="@+id/btn_language_en"
+                    android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1"
+                    android:text="🇬🇧  English" android:textSize="12sp" android:textStyle="bold"
+                    android:background="@drawable/tab_inactive_bg" android:textColor="@color/text_secondary"
+                    android:layout_marginStart="3dp"/>
+            </LinearLayout>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Aplikasi akan dimuat ulang saat bahasa diganti.\nApp will restart when language is changed."
+                android:textSize="10sp" android:textColor="@color/text_hint"
+                android:layout_marginTop="10dp" android:lineSpacingMultiplier="1.4"/>
+        </LinearLayout>
+
+        <!-- About section -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="TENTANG APLIKASI" android:textSize="11sp" android:textStyle="bold"
+            android:textColor="@color/sage" android:letterSpacing="0.05"
+            android:paddingHorizontal="16dp" android:paddingBottom="8dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:background="@drawable/card_bg"
+            android:layout_marginHorizontal="14dp" android:layout_marginBottom="14dp"
+            android:padding="16dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:paddingVertical="8dp"
+                android:gravity="center_vertical">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Versi" android:textSize="13sp"
+                    android:textColor="@color/text_secondary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="1.0.0" android:textSize="13sp" android:textStyle="bold"
+                    android:textColor="@color/text_primary"/>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="@color/sage_light"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:paddingVertical="8dp"
+                android:gravity="center_vertical">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Developer" android:textSize="13sp"
+                    android:textColor="@color/text_secondary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="CatatHutang Team" android:textSize="13sp" android:textStyle="bold"
+                    android:textColor="@color/text_primary"/>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="@color/sage_light"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:paddingVertical="8dp"
+                android:gravity="center_vertical">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Data investasi" android:textSize="13sp"
+                    android:textColor="@color/text_secondary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Yahoo Finance" android:textSize="13sp" android:textStyle="bold"
+                    android:textColor="@color/sage"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Logout button -->
+        <Button android:id="@+id/btn_logout" android:layout_width="match_parent"
+            android:layout_height="52dp" android:text="@string/logout_title"
+            android:textSize="14sp" android:textStyle="bold"
+            android:layout_marginHorizontal="14dp" android:layout_marginBottom="28dp"
+            android:textColor="@color/red_soft" android:backgroundTint="@color/red_light"
+            style="@style/Widget.Material3.Button"/>
+
+    </LinearLayout>
+</ScrollView>

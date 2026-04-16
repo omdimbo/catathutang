@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DebtNote</string>
+
+    <!-- Nav -->
+    <string name="nav_catatan">Notes</string>
+    <string name="nav_cicilan">Installments</string>
+    <string name="nav_investasi">Invest</string>
+
+    <!-- Login -->
+    <string name="login_welcome">Welcome</string>
+    <string name="login_subtitle">Sign in to continue</string>
+    <string name="login_google">Sign in with Google</string>
+    <string name="login_guest">Continue as Guest</string>
+    <string name="login_terms">Your data is stored locally on this device.</string>
+    <string name="login_tagline">Manage your finances wisely</string>
+    <string name="login_or">or</string>
+
+    <!-- Hutang screen -->
+    <string name="hutang_title">DebtNote</string>
+    <string name="hutang_active_count">%d active notes</string>
+    <string name="hutang_berhutang">I Owe</string>
+    <string name="hutang_piutang">Owed to Me</string>
+    <string name="hutang_saldo">Balance</string>
+    <string name="hutang_section_active">Active notes</string>
+    <string name="hutang_empty">No notes yet.\nTap + to add one.</string>
+    <string name="hutang_add_title">New Debt Note</string>
+    <string name="hutang_type_label">Type</string>
+    <string name="hutang_type_berhutang">💸 I Owe</string>
+    <string name="hutang_type_piutang">💰 Owed to Me</string>
+    <string name="hutang_nama_label">Name</string>
+    <string name="hutang_nama_hint">Person\'s name</string>
+    <string name="hutang_nominal_label">Amount (Rp)</string>
+    <string name="hutang_ket_label">Description</string>
+    <string name="hutang_ket_hint">What for?</string>
+    <string name="hutang_kat_label">Category</string>
+    <string name="hutang_save">Save</string>
+    <string name="hutang_saved_toast">Note saved!</string>
+    <string name="hutang_validation">Fill in name &amp; amount!</string>
+    <string name="hutang_detail_title">Debt Detail</string>
+    <string name="hutang_jenis_label">Type</string>
+    <string name="hutang_kategori_label">Category</string>
+    <string name="hutang_keterangan_label">Description</string>
+    <string name="hutang_mark_lunas">✓ Mark as Paid</string>
+    <string name="hutang_hapus">Delete Note</string>
+    <string name="hutang_dialog_lunas_title">Mark as Paid</string>
+    <string name="hutang_dialog_lunas_msg">Mark \"%s\" as fully paid?</string>
+    <string name="hutang_dialog_hapus_title">Delete Note</string>
+    <string name="hutang_dialog_hapus_msg">Delete note \"%s\"?</string>
+    <string name="hutang_lunas_toast">Marked as paid!</string>
+    <string name="hutang_hapus_toast">Note deleted</string>
+    <string name="badge_hutang">Debt</string>
+    <string name="badge_piutang">Credit</string>
+    <string name="type_berhutang">I owe this person</string>
+    <string name="type_piutang">This person owes me</string>
+
+    <!-- Cicilan screen -->
+    <string name="cicilan_title">My Installments</string>
+    <string name="cicilan_subtitle">%1$d active · %2$d paid off</string>
+    <string name="cicilan_total">Total debt</string>
+    <string name="cicilan_terbayar">Paid</string>
+    <string name="cicilan_sisa">Remaining</string>
+    <string name="cicilan_empty">No installments yet.\nTap + to add one.</string>
+    <string name="cicilan_add_title">Add Installment</string>
+    <string name="cicilan_nama_label">Installment name</string>
+    <string name="cicilan_nama_hint">e.g. Phone installment</string>
+    <string name="cicilan_kat_label">Category</string>
+    <string name="cicilan_total_label">Total amount (Rp)</string>
+    <string name="cicilan_per_bulan_label">Monthly payment (Rp)</string>
+    <string name="cicilan_tenor_label">Tenor (months)</string>
+    <string name="cicilan_dari_label">From (optional)</string>
+    <string name="cicilan_dari_hint">Bank / person name</string>
+    <string name="cicilan_save">Save installment</string>
+    <string name="cicilan_saved_toast">Installment added!</string>
+    <string name="cicilan_validation">Fill in name &amp; total!</string>
+    <string name="cicilan_sisa_label">remaining</string>
+    <string name="cicilan_bln_lagi">%d mo left</string>
+    <string name="cicilan_selesai">Done</string>
+    <string name="cicilan_pct_lunas">%d%% paid</string>
+    <string name="badge_aktif">Active</string>
+    <string name="badge_lunas">Paid off</string>
+    <string name="cicilan_detail_title">Installment Detail</string>
+    <string name="cicilan_stat_total">Total</string>
+    <string name="cicilan_stat_terbayar">Paid</string>
+    <string name="cicilan_stat_sisa">Remaining</string>
+    <string name="cicilan_stat_per_bulan">Per month</string>
+    <string name="cicilan_stat_tenor">Tenor</string>
+    <string name="cicilan_stat_bayar_ke">Payment no.</string>
+    <string name="cicilan_tambah_bayar">Add Payment</string>
+    <string name="cicilan_batalkan">↩ Undo last</string>
+    <string name="cicilan_bayar_hint">Amount (Rp)</string>
+    <string name="cicilan_bayar_btn">Pay</string>
+    <string name="cicilan_riwayat">Payment history</string>
+    <string name="cicilan_empty_bayar">No payments yet</string>
+    <string name="cicilan_hapus">Delete Installment</string>
+    <string name="cicilan_hapus_msg">Delete installment \"%s\"?</string>
+    <string name="cicilan_hapus_toast">Installment deleted</string>
+    <string name="cicilan_terbayar_pct">%d%% paid</string>
+    <string name="cicilan_lunas_msg">Congratulations! Fully paid off! 🎉</string>
+    <string name="cicilan_bayar_toast">Payment recorded!</string>
+    <string name="cicilan_undo_toast">Undone</string>
+    <string name="cicilan_undo_empty">No payments to undo</string>
+    <string name="cicilan_melebihi">Amount exceeds remaining debt!</string>
+    <string name="cicilan_nominal_kosong">Enter an amount!</string>
+    <string name="cicilan_payment_no">Payment #%d</string>
+    <string name="cicilan_payment_bulan">Month %d payment</string>
+    <string name="cicilan_sisa_after">Remaining: %s</string>
+
+    <!-- Investasi -->
+    <string name="investasi_title">Investment Ideas</string>
+    <string name="investasi_tab_komoditas">Gold &amp; Commodities</string>
+    <string name="investasi_tab_saham">IDX Stocks</string>
+    <string name="investasi_refresh">↻ Refresh</string>
+    <string name="investasi_loading">Loading data…</string>
+    <string name="investasi_updating">Updating data...</string>
+    <string name="note_komoditas">Commodity prices sourced from Yahoo Finance (real-time). Investing involves risk.</string>
+    <string name="note_saham">Stock price data is simulated. Use an OJK-registered broker for actual transactions.</string>
+    <string name="note_saham_realtime">IDX stock data from Yahoo Finance (~15 min delay). Investing involves risk. Use an OJK-registered broker.</string>
+
+    <!-- Logout / Settings -->
+    <string name="logout_title">Sign Out</string>
+    <string name="logout_msg">Are you sure you want to sign out?</string>
+    <string name="btn_yes">Yes</string>
+    <string name="btn_no">Cancel</string>
+    <string name="btn_delete">Delete</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_language_id">Indonesian</string>
+    <string name="settings_language_en">English</string>
+
+    <!-- Categories -->
+    <string-array name="kategori_hutang">
+        <item>Personal</item>
+        <item>Business</item>
+        <item>Family</item>
+    </string-array>
+</resources>
